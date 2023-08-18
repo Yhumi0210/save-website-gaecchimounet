@@ -1,0 +1,115 @@
+
+:root {
+  --color-carotte: #E09132;
+  --color-vers-kaki: #4E614A;
+  --color-vert-clair: #455940;
+  --color-vert-sapin: #2E3C29;
+  --color-beige-creme: #FFEFCD;
+  --color-chocolat-lait: #A58E74;
+  --color-chocolate: #69462D;
+}
+
+.h1para-galerie {
+  background-color: transparent;
+  color: var(--color-beige-creme);
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 400;
+  margin-top: 8rem;
+  margin-bottom: 6rem;
+}
+
+.h2para-galerie {
+  background-color: transparent;
+  color: var(--color-beige-creme);
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 400;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: 0;
+}
+
+.gallery {
+  max-width: 2000px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vmin;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.gallery::after {
+  content: "";
+  display: block;
+  flex-grow: 10;
+}
+
+.gallery li {
+  list-style-type: none;
+  height: 350px;
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail {
+  transition: transform 0.3s ease-in-out;
+}
+
+.thumbnail:hover {
+  transform: scale(0.95);
+}
+
+.image-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+.image-popup img {
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  margin: 5% auto ;
+  border: 5px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Smartphones en mode paysage */
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+
+.gallery li {
+  list-style-type: none;
+  height: 300px;
+  flex-grow: 1;
+}
+}
+
+/* Smartphones en mode portrait */
+@media only screen and (min-width: 320px) and (max-width: 424px) {
+  .gallery li {
+    list-style-type: none;
+    height: 200px;
+    flex-grow: 1;
+  }
+}
+
+/* Smartphones en mode portrait */
+@media only screen and (min-width: 20px) and (max-width: 320px) {
+  .gallery li {
+    list-style-type: none;
+    height: 200px;
+    flex-grow: 1;
+  }
+}

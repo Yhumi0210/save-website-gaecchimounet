@@ -1,0 +1,112 @@
+:root {
+    --color-carotte: #E09132;
+    --color-vers-kaki: #4E614A;
+    --color-vert-clair: #455940;
+    --color-vert-sapin: #2E3C29;
+    --color-beige-creme: #FFEFCD;
+    --color-chocolat-lait: #A58E74;
+    --color-chocolate: #69462D;
+}
+
+.button-command {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.navul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navulli {
+    --c: #E09132;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 2.5em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.navulli2 {
+    --c: #E09132;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 18em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 2.5em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.navullispan {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.navulli:hover {
+    color: #FFEFCD;
+}
+
+.navulli:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.navulli2:hover {
+    color: #FFEFCD;
+}
+
+.navulli2:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.navullispan:nth-child(1) {
+    --n: 1;
+}
+
+.navullispan:nth-child(2) {
+    --n: 2;
+}
+
+.navullispan:nth-child(3) {
+    --n: 3;
+}
+
+.navullispan:nth-child(4) {
+    --n: 4;
+}
